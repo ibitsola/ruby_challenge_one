@@ -12,48 +12,62 @@
 # when the string is 'hello world'
 # the method should return 'HELLO WORLD'
 def block_caps_a_string(string)
-  # your code goes here
+  return string.upcase
 end
+my_upcase_string = "I am not shouting, I just like capital LETTERS"
+puts block_caps_a_string(my_upcase_string)
 
 # TASK: define a method that returns a string that is the same as a given string, but converted to lower-case characters.
 # EXAMPLE INPUT/OUTPUT:
 # when the string is 'HELLO WORLD'
 # the method should return 'hello world'
 def lower_case_a_string(string)
-  # your code goes here
+  return string.downcase
 end
+my_downcase_string = "TiNy LeTTers aRe boRinG"
+puts lower_case_a_string(my_downcase_string)
+
 
 # TASK: define a method that returns a number which is the count of all characters in a given string.
 # EXAMPLE INPUT/OUTPUT:
 # when the string is 'hello'
 # the method should return 5
 def length_of_a_string(string)
-  # your code goes here
+  return string.length
 end
+my_lenght_string = "Google said that 'Pneumonoultramicroscopicsilicovolcanoconiosis' is the longest english word. However word is word is Greek"
+puts length_of_a_string(my_lenght_string)
 
 # TASK: define a method that returns a string that reverses the order of the characters in a given string.
 # EXAMPLE INPUT/OUTPUT:
 # when the string is 'hello'
 # the method should return 'olleh'
 def reverse_a_string(string)
-  # your code goes here
+  return string.reverse
 end
+my_reverse_string = "Palindrome"
+puts reverse_a_string(my_reverse_string)
 
 # TASK: define a method that returns a string that inverts the case of each character in a given string.
 # EXAMPLE INPUT/OUTPUT:
 # when the string is 'Hello World'
 # the method should return 'hELLO wORLD'
 def swap_the_case_of_a_string(string)
-  # your code goes here
+  return string.swapcase
 end
+my_swapcase_string = "again, i am not shouting."
+puts swap_the_case_of_a_string(my_swapcase_string)
 
 # TASK: define a method that returns a symbol that has the same characters (single words for now).
 # EXAMPLE INPUT/OUTPUT:
 # when the string is 'hello'
 # the method should return :hello
 def string_to_symbol(string)
-  # your code goes here
+  return string.to_sym
 end
+my_to_sym = "symbol"
+puts my_to_sym.class
+puts string_to_symbol(my_to_sym).class
 
 # Integer methods
 
@@ -64,8 +78,12 @@ end
 # when the integer is 2
 # the method should return false
 def is_integer_odd?(integer)
-  # your code goes here
+  return integer.odd?
 end
+my_odd_integer = 7
+puts "Is this integer an odd number? #{is_integer_odd?(my_odd_integer)}"
+my_odd_integer = 8
+puts "Is this integer an odd number? #{is_integer_odd?(my_odd_integer)}"
 
 # TASK: define a method that returns a boolean evaluates if a given integer is even.
 # EXAMPLE INPUT/OUTPUT:
@@ -74,40 +92,53 @@ end
 # when the integer is 2
 # the method should return true
 def is_integer_even?(integer)
-  # your code goes here
+  return integer.even?
 end
-
+my_even_integer = 8
+puts "Is this integer an even number? #{is_integer_even?(my_even_integer)}"
+my_even_integer = 9
+puts "Is this integer an even number? #{is_integer_even?(my_even_integer)}"
 # TASK: define a method that returns a float converted from a given integer.
 # EXAMPLE INPUT/OUTPUT:
 # when the integer is 1
 # the method should return 1.0
 def integer_to_float(integer)
-  # your code goes here
+  return integer.to_f
 end
+my_integer_to_float = 9
+puts integer_to_float(my_integer_to_float)
+
 
 # TASK: define a method that returns a string equivalent of a given integer.
 # EXAMPLE INPUT/OUTPUT:
 # when the integer is 1
 # the method should return '1'
 def integer_to_string(integer)
-  # your code goes here
+  return integer.to_s
 end
+my_integer_to_string = 5
+puts integer_to_string(my_integer_to_string)
+puts integer_to_string(my_integer_to_string).class
 
 # TASK: define a method that returns an integer that is one less than a given integer (don't worry about negative numbers for now).
 # EXAMPLE INPUT/OUTPUT:
 # when the integer is 2
 # the method should return 1
 def return_previous_integer(integer)
-  # your code goes here
+  return integer.pred
 end
+my_previous_integer = 9
+puts return_previous_integer(my_previous_integer)
 
 # TASK: define a method that returns an integer that is one more than a given integer (don't worry about negative numbers for now).
 # EXAMPLE INPUT/OUTPUT:
 # when the integer is 1
 # the method should return 2
 def return_next_integer(integer)
-  # your code goes here
+  return integer.next
 end
+my_next_integer = 2
+puts return_next_integer(my_next_integer)
 
 # Float methods
 
@@ -116,32 +147,41 @@ end
 # when the float is 1.1
 # the method should return 2.0
 def round_up(float)
-  # your code goes here
+  return float.round 
 end
+my_float_rounded = 7.88
+puts round_up(my_float_rounded)
 
 # TASK: define a method that returns a float that is rounded down from a given float.
 # EXAMPLE INPUT/OUTPUT:
 # when the float is 1.1
 # the method should return 1.0
 def round_down(float)
-  # your code goes here
+  return float.floor
 end
+my_float_rounded_down = 7.88
+puts round_down(my_float_rounded_down)
 
 # TASK: define a method that returns a string that is equivalent to a given float.
 # EXAMPLE INPUT/OUTPUT:
 # when the float is 1.1
 # the method should return '1.1'
 def float_to_string(float)
-  # your code goes here
+  float.to_s
 end
+my_float_to_string = 8.99
+puts float_to_string(my_float_to_string)
+puts float_to_string(my_float_to_string).class
 
 # TASK: define a method that returns a integer that is converted from a given float.
 # EXAMPLE INPUT/OUTPUT:
 # when the float is 1.1
 # the method should return 1
 def float_to_integer(float)
-  # your code goes here
+  return float.to_i
 end
+my_float_to_i = 5.78
+puts float_to_integer(my_float_to_i)
 
 # TASK: define a method that returns a boolean that evaluates whether or not a given float is positive.
 # EXAMPLE INPUT/OUTPUT:
@@ -150,8 +190,12 @@ end
 # when the float is -1.1
 # the method should return false
 def float_is_positive?(float)
-  # your code goes here
+  return float.positive?
 end
+my_float_possitive = 5
+puts float_is_positive?(my_float_possitive)
+my_float_possitive = -5
+puts float_is_positive?(my_float_possitive)
 
 # TASK: define a method that returns a boolean that evaluates whether or not a given float is negative.
 # EXAMPLE INPUT/OUTPUT:
@@ -160,9 +204,12 @@ end
 # when the float is -1.1
 # the method should return true
 def float_is_negative?(float)
-  # your code goes here
+  return float.negative?
 end
-
+my_float_negative = -5
+puts float_is_negative?(my_float_negative)
+my_float_negative = 5
+puts float_is_negative?(my_float_negative)
 # Symbol methods
 
 # TASK: define a method that returns a symbol that inverts the case of each character for a given symbol.
@@ -170,8 +217,10 @@ end
 # when the symbol is :Hello
 # the method should return :hELLO
 def swap_the_case_of_a_symbol(symbol)
-  # your code goes here
+  return symbol.swapcase
 end
+my_inverted_symbol = :hello
+puts swap_the_case_of_a_symbol(my_inverted_symbol)
 
 # TASK: define a method that returns a string that is the equivalent of a given symbol.
 # EXAMPLE INPUT/OUTPUT:

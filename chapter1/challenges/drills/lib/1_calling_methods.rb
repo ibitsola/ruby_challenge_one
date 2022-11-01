@@ -227,25 +227,31 @@ puts swap_the_case_of_a_symbol(my_inverted_symbol)
 # when the symbol is :hello
 # the method should return 'hello'
 def symbol_to_string(symbol)
-  # your code goes here
+  return symbol.to_s
 end
+my_symbol_to_string = :Hello
+puts symbol_to_string(my_symbol_to_string)
+puts symbol_to_string(my_symbol_to_string).class
 
 # TASK: define a method that returns a symbol that converts every character of a given symbol to upper case.
 # EXAMPLE INPUT/OUTPUT:
 # when the symbol is :hello
 # the method should return :HELLO
 def block_caps_a_symbol(symbol)
-  # your code goes here
+  return symbol.upcase
 end
+my_symbol_block_caps = :hola
+puts block_caps_a_symbol(my_symbol_block_caps)
 
 # TASK: define a method that returns a symbol that converts every character of a given symbol to lower case.
 # EXAMPLE INPUT/OUTPUT:
 # when the symbol is :HELLO
 # the method should return :hello
 def lower_case_a_symbol(symbol)
-  # your code goes here
+  return symbol.downcase
 end
-
+my_downcase_symbol = :HELLO
+puts lower_case_a_symbol(my_downcase_symbol)
 # Boolean methods
 
 # TASK: define a method that returns a string which is equivalent to a given boolean.
@@ -255,6 +261,10 @@ end
 # when the boolean is false
 # the method should return false
 def boolean_to_string(boolean)
-  # your code goes here
+  return boolean.to_s
 end
+ my_boolean_to_sting = 3 > 2 && 2 > 1
+puts boolean_to_string(my_boolean_to_sting)
+my_boolean_to_sting = 3 == 2 && 2 > 1
+puts boolean_to_string(my_boolean_to_sting)
 

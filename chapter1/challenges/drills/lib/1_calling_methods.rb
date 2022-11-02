@@ -105,7 +105,7 @@ puts "Is this integer an even number? #{is_integer_even?(my_even_integer)}"
 def integer_to_float(integer)
   return integer.to_f
 end
-my_integer_to_float = 9
+my_integer_to_float = 1
 puts integer_to_float(my_integer_to_float)
 
 
@@ -147,9 +147,9 @@ puts return_next_integer(my_next_integer)
 # when the float is 1.1
 # the method should return 2.0
 def round_up(float)
-  return float.round 
+  return float.ceil().to_f 
 end
-my_float_rounded = 7.88
+my_float_rounded = 1.1
 puts round_up(my_float_rounded)
 
 # TASK: define a method that returns a float that is rounded down from a given float.
@@ -159,7 +159,7 @@ puts round_up(my_float_rounded)
 def round_down(float)
   return float.floor
 end
-my_float_rounded_down = 7.88
+my_float_rounded_down = 1.1
 puts round_down(my_float_rounded_down)
 
 # TASK: define a method that returns a string that is equivalent to a given float.

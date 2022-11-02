@@ -211,7 +211,6 @@ puts rev_sym_caps(my_cocktail_string).class
 # returns the whole string
 
 def truncate(string)
-    #string_total_char = string.length
     if(string.length > 10)
         return "#{string[0,10]}..." 
     else (string.length < 10)

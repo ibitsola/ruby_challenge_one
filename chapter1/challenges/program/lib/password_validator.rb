@@ -3,4 +3,14 @@
 # - include at least one of these characters: !, @, $, %, &
 
 def valid?(password)
+    if password.length >= 8 && (password.include?("!") || password.include?("@") || password.include?("$") || password.include?("%") || password.include?("&"))
+      return true
+    else
+      return false
+    end
 end
+
+def 
+  
+my_pass = "Hello!"
+puts valid?(my_pass)  
